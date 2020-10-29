@@ -35,7 +35,7 @@ export class ServiciosComponent implements OnInit {
     this.FormReg = this.formBuilder.group({
       IdArticulo: [0],
       Descripcion: [ "", [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
-      Importe: [null, [Validators.required, Validators.pattern("[0-9]{1,7}")]],
+      Importe: [null, [Validators.required, Validators.pattern("[0-9]{1,7}[-.][0-9]{2}")]],
       CantidadHoras: [null, [Validators.required, Validators.pattern("[0-9]{1,7}")]],
     });
 
